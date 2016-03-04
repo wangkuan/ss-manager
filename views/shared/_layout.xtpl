@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+    <style>
+        .navbar {
+            margin-bottom: 20px;
+        }
+        
+        footer {
+            margin-top: 20px;
+            height: 80px;
+        }
+    </style>
+    {{{block ("style")}}}
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-light bg-faded">
+            <div class="container">
+                <a class="navbar-brand" href="#">ShadowSocks</a>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">首页<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">客户端下载</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">用户中心</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">关于我们</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav pull-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user/register">注册</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user/login">登录</a>
+                    </li>
+                </ul>
+                <!--<ul class="nav navbar-nav pull-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="notifications/index.html">
+                            <i class="fa fa-bell fa-1x"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <img class="img-circle" src="/img/avatar.png" style="width:32px;">
+                    </li>
+                </ul>-->
+            </div>
+        </nav>
+    </div>
+    {{{block ("body")}}}
+    <footer class="footer bg-faded">
+        <div class="container">
+            这里是底部内容
+        </div>
+    </footer>
+    {{{block ("modal")}}}
+    <script src="/js/jquery-2.1.4.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    {{{block ("script")}}}
+    <!-- jQuery first, then Bootstrap JS. -->
+    <!--<script src="/js/Chart.min.js"></script>-->
+    <!--<script type="text/javascript">
+        var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+		var lineChartData = {
+			labels : ["January","February","March","April","May","June","July"],
+			datasets : [
+				{
+					label: "My First dataset",
+					fillColor : "rgba(220,220,220,0.2)",
+					strokeColor : "rgba(220,220,220,1)",
+					pointColor : "rgba(220,220,220,1)",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(220,220,220,1)",
+					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+				},
+				{
+					label: "My Second dataset",
+					fillColor : "rgba(151,187,205,0.2)",
+					strokeColor : "rgba(151,187,205,1)",
+					pointColor : "rgba(151,187,205,1)",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(151,187,205,1)",
+					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+				}
+			]
+		}
+        window.onload = function(){
+            var ctx = document.getElementById("canvas").getContext("2d");
+            window.myLine = new Chart(ctx).Line(lineChartData, {
+                responsive: true
+            });
+        }
+    </script>-->
+</body>
+
+</html>

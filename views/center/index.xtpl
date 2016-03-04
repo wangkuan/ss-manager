@@ -1,0 +1,39 @@
+{{extend ("./_layout.xtpl")}} {{#block ("content")}}
+<div class="col-xs-8">
+    <div class="card">
+        <div class="card-header">
+            公告
+        </div>
+        <div class="card-block">
+            <ol>
+                <li>流量不会重置，可以通过签到获取流量。</li>
+                <li>流量可以通过签到获取，基本每天可以用1G流量。</li>
+                <li>流量不会重置，可以通过签到获取流量。</li>
+                <li>流量可以通过签到获取，基本每天可以用1G流量。</li>
+                <li>流量不会重置，可以通过签到获取流量。</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div class="col-xs-8">
+    <div class="card">
+        <div class="card-header">
+            Q&A
+        </div>
+        <div class="card-block">
+            <ol>
+                <li>流量不会重置，可以通过签到获取流量。</li>
+                <li>流量可以通过签到获取，基本每天可以用1G流量。</li>
+                <li>流量不会重置，可以通过签到获取流量。</li>
+                <li>流量可以通过签到获取，基本每天可以用1G流量。</li>
+                <li>流量不会重置，可以通过签到获取流量。</li>
+                <li>流量可以通过签到获取，基本每天可以用1G流量。</li>
+                <li>流量不会重置，可以通过签到获取流量。</li>
+                <li>流量可以通过签到获取，基本每天可以用1G流量。</li>
+                <li>流量不会重置，可以通过签到获取流量。</li>
+                <li>流量可以通过签到获取，基本每天可以用1G流量。</li>
+            </ol>
+        </div>
+    </div>
+</div>
+{{/block}}

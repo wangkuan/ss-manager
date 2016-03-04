@@ -1,0 +1,70 @@
+{{extend ("./_layout.xtpl")}} {{#block ("content")}}
+<div class="col-xs-8">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a href="#" class="nav-link active">国内线路</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">香港</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">日本</a>
+        </li>
+        <li class="nav-item disabled">
+            <a href="#" class="nav-link">美国</a>
+        </li>
+        <li class="nav-item disabled">
+            <a href="#" class="nav-link">英国</a>
+        </li>
+    </ul>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>名称</th>
+                <th>状态</th>
+                <th>当前负载</th>
+                <th>刷新时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>加拿大线路1</td>
+                <td>正常</td>
+                <td>30%</td>
+                <td>3分钟前</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-sm">激活</button>
+                </td>
+            </tr>
+            <tr>
+                <td>洛杉矶线路1</td>
+                <td>正常</td>
+                <td>30%</td>
+                <td>3分钟前</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-sm">激活</button>
+                </td>
+            </tr>
+            <tr>
+                <td>加拿大线路2</td>
+                <td>正常</td>
+                <td>30%</td>
+                <td>3分钟前</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-sm">激活</button>
+                </td>
+            </tr>
+            <tr>
+                <td>洛杉矶线路3</td>
+                <td>正常</td>
+                <td>30%</td>
+                <td>3分钟前</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-sm">激活</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{{/block}}

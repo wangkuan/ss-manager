@@ -1,0 +1,71 @@
+{{extend ("../shared/_layout.xtpl")}} {{#block ("body")}}
+<div class="container">
+    <div class="col-xs-4">
+        <div class="card list-group-flush">
+            <div class="card-block">
+                <img class="img-circle pull-right" src="/img/avatar.png" style="width:48px;">
+                <h2 class="card-title">张三</h2>
+                <dl>
+                    <dt>当前套餐</dt>
+                    <dd>500M/月（包年）</dd>
+                    <dt>有效期</dt>
+                    <dd>2015-12-21&nbsp;至&nbsp;2015-12-31，剩余32天
+                        <progress class="progress progress-striped progress-info" value="50" max="100">50%</progress>
+                    </dd>
+                    <dt>本月流量</dt>
+                    <dd>共500M，已使用250M，剩余250M
+                        <progress class="progress progress-striped progress-info" value="50" max="100">50%</progress>
+                    </dd>
+                </dl>
+                <a href="#" class="btn btn-primary btn-block btn-info" data-toggle="modal" data-target="#connectionModal">查看连接信息</a>
+            </div>
+            <div class="list-group">
+                {{#each(pages)}} {{#if(this.navShow)}}
+                <a href="/center{{this.url}}" class="list-group-item{{#if(navIndex===xindex)}} active{{/if}}">{{this.name}}</a>{{/if}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-8">
+        <ol class="breadcrumb">
+            <li><a href="/center">用户中心</a></li>
+            <li class="active">{{pageName}}</li>
+        </ol>
+    </div>
+    {{block ("content")}}
+</div>
+{{/block}} {{#block ("modal")}}
+<div class="modal fade" id="connectionModal" tabindex="-1" role="dialog" aria-labelledby="connectionModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="connectionModalLabel">连接信息</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>连接地址</th>
+                            <th>端口</th>
+                            <th>加密方式</th>
+                            <th>秘钥</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>(根据线路获得地址)</td>
+                            <td>8080</td>
+                            <td>rc4-md5</td>
+                            <td>abcdefg</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{{/block}}

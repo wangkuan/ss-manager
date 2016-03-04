@@ -1,0 +1,65 @@
+{{extend ("../shared/_layout.xtpl")}} {{#block ("script")}}
+<script src="/js/jQuery.md5.js"></script>
+<script>
+    function register(){
+        var passwordx = $('#txtPassword').val();
+        passwordx = $.md5(passwordx);
+        $('#txtPassword').val(passwordx);
+        return true;
+    }
+
+</script>
+{{/block}} {{#block ("style")}}
+<style>
+    .error {
+        color: red;
+    }
+</style>
+
+{{/block}} {{#block ("body")}}
+<div class="container">
+    <div class="col-xs-7">
+        <img src="/img/cloud.png" alt="..." class="img-rounded" style="width:100%;">
+    </div>
+    <div class="col-xs-4 col-xs-offset-1">
+        <div class="card">
+            <div class="card-header">
+                新用户
+            </div>
+            <div class="card-block">
+                {{#if(err)}}
+                <dl class="error">
+                    <dt>注册失败</dt>
+                    <dd>{{err}}</dd>
+                </dl>
+                {{/if}}
+                <form method="POST" onsubmit="return register()">
+                    <fieldset class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入邀请码">
+                        <small class="text-muted">邀请码可以通过老朋友获取</small>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input name="username" type="text" class="form-control" placeholder="输入用户名">
+                        <small class="text-muted">用户名只能由英文字母或数字所组成</small>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <div class="input-group">
+                            <input id="txtPassword" name="passwordx" type="password" class="form-control" placeholder="请输入密码">
+                            <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="button"><i class="fa fa-eye"></i></button>
+                        </span>
+                        </div>
+                        <small class="text-muted">您可以设置一个小于12位的密码</small>
+                    </fieldset>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox">&nbsp;同意《用户协议》
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">完成注册</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{{/block}}
